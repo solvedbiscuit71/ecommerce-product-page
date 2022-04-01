@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CartWrapper from '../styles/CartWrapper';
 import Button from '../styles/Button'
+import { flushSync } from 'react-dom';
 function Cart(props) {
+  const [display,setDisplay] = useState(false)
+  const [transition,settransition] = useState(false)
+  useEffect(_ => {
+    if (props.show) {
+      // using flushSync to avoid automatic badging in React 18
+      flushSync(_ => {
+        setDisplay(true)
+      })
+      settransition(true)
+      return
+    }
+    settransition(false)
+    setTimeout(() => {
+      setDisplay(false)
+    }, 200);
+  },[props.show])
+
   return (
-    <CartWrapper isEmpty={props.count === 0} show={props.show}>
+    <CartWrapper isEmpty={props.count === 0} display={display} transition={transition}>
       <h2>Cart</h2>
 
       <div>

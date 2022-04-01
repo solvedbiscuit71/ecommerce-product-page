@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export default styled.section(props => ({
-  display: props.show ? 'block' : 'none',
+  display: props.display ? 'block' : 'none',
+  opacity: props.transition ? 1 : 0,
+  transition: 'opacity 200ms ease-in-out',
   width: '22.5em',
   position: 'absolute',
   zIndex: 8,
