@@ -1,7 +1,7 @@
 import React from 'react';
 function Navbar(props) {
   return (
-    <div>
+    <div className='navbar'>
       <img src="images/icon-close.svg" alt="close icon" />
 
       <ul>

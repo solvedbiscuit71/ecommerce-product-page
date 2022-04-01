@@ -1,3 +1,4 @@
+import { Global } from '@emotion/react';
 import React from 'react';
 import Cart from './Cart';
 import Gallery from './Gallery';
@@ -5,6 +6,16 @@ import Header from './Header';
 function App(props) {
   return (
     <>
+      <Global styles={`
+      @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+      html,body {
+        margin: 0;
+        padding: 0;
+        font-family: "Kumbh Sans";
+      }
+      `}/>
+
       <Header/>
       <Cart/>
       <Gallery/>
