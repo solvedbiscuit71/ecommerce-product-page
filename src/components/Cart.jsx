@@ -3,7 +3,7 @@ import CartWrapper from '../styles/CartWrapper';
 import Button from '../styles/Button'
 function Cart(props) {
   return (
-    <CartWrapper isEmpty={props.count === 0}>
+    <CartWrapper isEmpty={props.count === 0} show={props.show}>
       <h2>Cart</h2>
 
       <div>

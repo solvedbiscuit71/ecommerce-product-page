@@ -5,7 +5,8 @@ import Slide from './Slide';
 import Header from './Header';
 import Content from './Content';
 function App(props) {
-  const [cart,setCart] = useState(0)
+  const [count,setCount] = useState(0)
+  const [showCart,setShowCart] = useState(false)
 
   return (
     <>
@@ -19,10 +20,10 @@ function App(props) {
       }
       `}/>
 
-      <Header count={cart}/>
-      <Cart count={cart} resetCount={_ => setCart(0)}/>
+      <Header count={count} toggleCart={_ => setShowCart(showCart ? false : true)}/>
+      <Cart count={count} resetCount={_ => setCount(0)} show={showCart}/>
       <Slide/>
-      <Content updateCart={count => setCart(count)}/>
+      <Content updateCart={count => setCount(count)}/>
     </>
   );
 }

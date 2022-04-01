@@ -2,9 +2,9 @@ import React from 'react';
 import NavbarWrapper from '../styles/NavbarWrapper';
 function Navbar(props) {
   return (
-    <NavbarWrapper className='navbar'>
+    <NavbarWrapper className='navbar' show={props.show}>
       <div>
-        <img src="images/icon-close.svg" alt="close icon" />
+        <img src="images/icon-close.svg" alt="close icon" onClick={props.closeNav} />
 
         <ul>
           <li>Collections</li>
