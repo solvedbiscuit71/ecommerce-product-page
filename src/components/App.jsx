@@ -1,5 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Cart from './Cart';
 import Slide from './Slide';
 import Header from './Header';
@@ -20,6 +20,26 @@ const theme = {
 function App(props) {
   const [count,setCount] = useState(0)
   const [showCart,setShowCart] = useState(false)
+  const [warning,setWarning] = useState(1)
+
+  useEffect(_ => {
+    document.addEventListener('click',event => {
+      setWarning(warn => {
+        if (warn == 1) {
+          return 0
+        }else {
+          const cart = document.getElementById('cart-container').getBoundingClientRect()
+          const x = event.clientX
+          const y = event.clientY
+          if (!( x > cart.left && x < cart.right && y > cart.top && y < cart.bottom )) {
+            setShowCart(false)
+            return 1
+          }
+          return warn
+        }
+      })
+    })
+  },[])
 
   return (
     <>

@@ -19,7 +19,7 @@ function Cart(props) {
   },[props.show])
 
   return (
-    <CartWrapper isEmpty={props.count === 0} show={show} transition={transition}>
+    <CartWrapper id='cart-container' isEmpty={props.count === 0} show={show} transition={transition}>
       <h2>Cart</h2>
 
       <div>
