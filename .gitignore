@@ -1,0 +1,7 @@
+# Files #
+.DS_Store
+package-lock.json
+
+# Folder #
+node_modules/
+design/
