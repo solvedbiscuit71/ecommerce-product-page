@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 
 export default styled.div(props => ({
   display: props.show ? 'block' : 'none',
+  opacity: props.transition ? 1 : 0,
+  transition: 'opacity 200ms ease-in-out',
   minWidth: '100vw',
   minHeight: '100vh',
   position: 'fixed',
@@ -10,6 +12,8 @@ export default styled.div(props => ({
   left: 0,
   backgroundColor: 'hsla(0,0%,0%,.75)',
   div: {
+    transform: props.transition ? '' : 'translateX(-100%)',
+    transition: 'transform 200ms ease-in-out',
     width: '15.625em',
     minHeight: '100vh',
     position: 'absolute',
