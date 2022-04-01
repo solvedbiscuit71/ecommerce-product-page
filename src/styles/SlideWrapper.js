@@ -1,13 +1,15 @@
 import styled from '@emotion/styled';
 
 export default styled.section(props => ({
-  height: 300,
+  aspectRatio: '375 / 300',
   position: 'relative',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '0 1em',
   '.slide-image': {
+    width: '100%',
+    height: '100%',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -15,8 +17,8 @@ export default styled.section(props => ({
       position: 'absolute',
       top: 0,
       left: 0,
-      width: 375,
-      height: 300,
+      width: '100%',
+      height: '100%',
       objectFit: 'cover'
     }
   },
