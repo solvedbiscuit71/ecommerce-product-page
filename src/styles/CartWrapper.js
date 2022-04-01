@@ -4,6 +4,7 @@ export default styled.section(props => ({
   display: props.show ? 'block' : 'none',
   width: '22.5em',
   position: 'absolute',
+  zIndex: 8,
   top: '4.75em',
   right: '.46785em',
   backgroundColor: 'white',
