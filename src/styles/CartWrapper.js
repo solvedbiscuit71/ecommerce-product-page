@@ -24,6 +24,7 @@ export default styled.section(props => ({
     minHeight: '10.55em',
     display: 'grid',
     placeContent: props.isEmpty ? 'center' : '',
+    color: props.isEmpty ? props.theme.text.normal : null,
     fontSize: '1.125rem',
     fontWeight: 700,
   },
