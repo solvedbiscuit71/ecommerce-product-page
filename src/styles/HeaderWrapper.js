@@ -32,5 +32,4 @@ export default styled.header(props => ({
   '.avatar': {
     width: '1.5em'
   },
-  '.navbar': { display: 'none' }
 }));
