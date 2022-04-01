@@ -1,7 +1,7 @@
 import { Global } from '@emotion/react';
 import React from 'react';
 import Cart from './Cart';
-import Gallery from './Gallery';
+import Slide from './Slide';
 import Header from './Header';
 function App(props) {
   return (
@@ -18,7 +18,7 @@ function App(props) {
 
       <Header/>
       <Cart/>
-      <Gallery/>
+      <Slide/>
 
       <section>
         <span>SNEAKER COMPANY</span>
