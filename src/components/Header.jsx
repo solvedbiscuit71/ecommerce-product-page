@@ -5,7 +5,7 @@ function Header(props) {
   const [show,setShow] = useState(false)
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper showCart={props.count !== 0}>
       <div className='flex'>
         <div className='flex'>
           <img src="images/icon-menu.svg" alt="menu icon" onClick={_ => setShow(true)} />

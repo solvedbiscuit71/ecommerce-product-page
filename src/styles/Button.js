@@ -5,7 +5,7 @@ export default styled.button(props => ({
   fontSize: '1rem',
   fontWeight: 700,
   textAlign: 'center',
-  backgroundColor: 'hsl(26, 100%, 55%)',
+  backgroundColor: props.theme.color.orange,
   border: 'none',
   borderRadius: '.375em',
   color: 'white'

@@ -13,6 +13,7 @@ export default styled.section(props => ({
   borderRadius: '.675em',
 
   '> h2': {
+    color: props.theme.text.bold,
     fontSize: '1.125rem',
     margin: 0,
     padding: '1.45em 1.33em',
@@ -51,10 +52,13 @@ export default styled.section(props => ({
           flexDirection: 'column',
           gap: '.5em',
           'h3,p': {
+            color: props.theme.text.normal,
             fontSize: '.9rem',
             fontWeight: 400,
             margin: 0,
             'span': {
+              color: props.theme.text.bold,
+              marginLeft: '.25em',
               fontWeight: 700
             }
           }

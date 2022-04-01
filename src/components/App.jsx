@@ -1,9 +1,22 @@
-import { Global } from '@emotion/react';
+import { Global, ThemeProvider } from '@emotion/react';
 import React, { useState } from 'react';
 import Cart from './Cart';
 import Slide from './Slide';
 import Header from './Header';
 import Content from './Content';
+const theme = {
+  color: {
+    orange: 'hsl(26, 100%, 55%)',
+    paleOrange: 'hsl(25, 100%, 94%)',
+    grayishBlue: 'hsl(223, 64%, 98%)'
+  },
+  text: {
+    bold: 'hsl(220, 13%, 13%)',
+    normal: 'hsl(219, 9%, 45%)',
+    light: 'hsl(220, 14%, 75%)'
+  }
+}
+
 function App(props) {
   const [count,setCount] = useState(0)
   const [showCart,setShowCart] = useState(false)
@@ -24,10 +37,12 @@ function App(props) {
       }
       `}/>
 
-      <Header count={count} toggleCart={_ => setShowCart(showCart ? false : true)}/>
-      <Cart count={count} resetCount={_ => setCount(0)} show={showCart}/>
-      <Slide/>
-      <Content updateCart={count => setCount(count)}/>
+      <ThemeProvider theme={theme}>
+        <Header count={count} toggleCart={_ => setShowCart(showCart ? false : true)}/>
+        <Cart count={count} resetCount={_ => setCount(0)} show={showCart}/>
+        <Slide/>
+        <Content updateCart={count => setCount(count)}/>
+      </ThemeProvider>
     </>
   );
 }

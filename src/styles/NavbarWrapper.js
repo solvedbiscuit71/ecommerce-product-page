@@ -31,6 +31,7 @@ export default styled.div(props => ({
       gap: '1.875em',
       flexDirection: 'column',
       'li': {
+        color: props.theme.text.bold,
         fontSize: '1.125rem',
         fontWeight: 700
       }

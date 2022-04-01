@@ -14,7 +14,7 @@ export default styled.header(props => ({
   '.cart-icon': {
     position: 'relative',
     'path': {
-      fill: 'hsl(220, 13%, 13%)'
+      fill: props.showCart ? props.theme.text.bold : ''
     },
     'span': {
       position: 'absolute',

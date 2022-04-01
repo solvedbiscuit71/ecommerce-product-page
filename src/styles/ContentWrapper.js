@@ -9,13 +9,15 @@ export default styled.section(props => ({
 
     '~ h1': {
       margin: '.5em 0',
-      fontSize: '1.675rem'
+      fontSize: '1.675rem',
+      color: props.theme.text.bold
     },
 
     '~ p': {
       fontSize: '.95rem',
       fontWeight: 400,
-      lineHeight: '1.5em'
+      lineHeight: '1.5em',
+      color: props.theme.text.normal
     }
   },
 
@@ -30,10 +32,11 @@ export default styled.section(props => ({
       display: 'flex',
       gap: '.6em',
       alignItems: 'center',
+      color: props.theme.text.bold,
 
       'span': {
-        backgroundColor: 'hsl(25, 100%, 94%)',
-        color: 'hsl(26, 100%, 55%)',
+        backgroundColor: props.theme.color.paleOrange,
+        color: props.theme.color.orange,
         fontSize: '.95rem',
         padding: '0.25em .5em',
         borderRadius: '.5em'
@@ -42,18 +45,20 @@ export default styled.section(props => ({
     '> div:last-of-type': {
       fontSize: '1rem',
       fontWeight: 700,
+      color: props.theme.text.light,
       textDecorationLine: 'line-through'
     }
   },
 
   '.input': {
     minHeight: '3.375em',
-    backgroundColor: 'hsl(223, 64%, 98%)',
+    backgroundColor: props.theme.color.grayishBlue,
     borderRadius: '.5em',
     padding: '0 1.5em',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    color: props.theme.text.bold,
     fontSize: '1rem',
     fontWeight: 700
   },
