@@ -41,7 +41,7 @@ function App(props) {
         <Header count={count} toggleCart={_ => setShowCart(showCart ? false : true)}/>
         <Cart count={count} resetCount={_ => setCount(0)} show={showCart}/>
         <Slide/>
-        <Content updateCart={count => setCount(count)}/>
+        <Content updateCart={count => setCount(old => old + count)}/>
       </ThemeProvider>
     </>
   );
