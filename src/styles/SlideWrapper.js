@@ -19,7 +19,8 @@ export default styled.section(props => ({
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit: 'cover'
+      objectFit: 'cover',
+      transition: 'opacity 300ms ease-in'
     }
   },
   '.btn': {

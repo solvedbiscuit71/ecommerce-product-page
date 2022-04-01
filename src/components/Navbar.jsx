@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { flushSync } from 'react-dom';
 import NavbarWrapper from '../styles/NavbarWrapper';
 function Navbar(props) {
   const [show,setShow] = useState(false)
   const [transition,setTransition] = useState(false)
   useEffect(_ => {
     if (props.show) {
-      flushSync(_ => {
-        setShow(true)
-      })
-      setTransition(true)
+      setTimeout(_ => {
+        setTransition(true)
+      },8)
+      setShow(true)
       return
     }
     setTransition(false)

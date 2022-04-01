@@ -27,7 +27,7 @@ function Slide(props) {
   return (
     <SlideWrapper>
       <div className='slide-image'>
-        {slides.map(( slide,index ) => <img style={current === index ? null : {display: 'none'}} src={slide} alt="product image" key={index} />)}
+        {slides.map(( slide,index ) => <img style={current === index ? {opacity: 1} : {opacity: 0}} src={slide} alt="product image" key={index} />)}
       </div>
       <div className='btn' onClick={prev}><img src="images/icon-previous.svg" alt="previous icon" /></div>
       <div className='btn' onClick={next}><img src="images/icon-next.svg" alt="next icon" /></div>
