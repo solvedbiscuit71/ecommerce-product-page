@@ -22,7 +22,7 @@ function Navbar(props) {
     <NavbarWrapper className='navbar clickable' show={show} transition={transition} >
       <ModelBg className='navbar-bg' onClick={props.closeNav} />
       <div className='navbar-content'>
-        <img src="images/icon-close.svg" alt="close icon" onClick={props.closeNav} />
+        <img id='close' src="images/icon-close.svg" alt="close icon" onClick={props.closeNav} />
 
         <ul>
           <li>Collections</li>

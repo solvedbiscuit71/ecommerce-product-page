@@ -11,7 +11,7 @@ export default styled.header(props => ({
     alignItems: 'center',
     gap: '1.5em'
   },
-  '.cart-icon': {
+  '#cart-icon': {
     position: 'relative',
     'path': {
       fill: props.showCart ? props.theme.text.bold : ''
@@ -29,7 +29,35 @@ export default styled.header(props => ({
       transform: 'translateX(40%)'
     }
   },
-  '.avatar': {
-    width: '1.5em'
+  '#avatar': {
+    width: '1.5em',
+    borderRadius: '50%'
   },
+
+  '@media (min-width: 1080px)': {
+    minHeight: '7em',
+    padding: 0,
+    margin: '0 11.45vw',
+    borderBottom: '1px solid hsla(0,0%,0%,0.125)',
+    '.flex': {
+      gap: '2.5em'
+    },
+    '#menu': {
+      display: 'none'
+    },
+    '#avatar': {
+      width: '3em',
+      outlineOffset: '.05em',
+      '&:hover': {
+        cursor: 'pointer',
+        outline: `.125em solid ${props.theme.color.orange}`
+      }
+    },
+    '#cart-icon:hover': {
+      cursor: 'pointer',
+      'path': {
+        fill: props.theme.text.bold
+      },
+    }
+  }
 }));

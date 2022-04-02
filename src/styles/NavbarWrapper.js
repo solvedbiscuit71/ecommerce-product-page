@@ -36,5 +36,54 @@ export default styled.div(props => ({
         fontWeight: 700
       }
     }
+  },
+
+  '@media (min-width: 1080px)': {
+    display: 'block',
+    opacity: 1,
+    position: 'static',
+    minWidth: 'unset',
+    minHeight: 'unset',
+    '.navbar-bg': {display: 'none'},
+    '.navbar-content': {
+      transform: 'translateX(0)',
+      position: 'static',
+      width: 'unset',
+      minHeight: 'unset',
+      padding: 0,
+      '#close': {
+        display: 'none'
+      },
+      'ul': {
+        margin: 0,
+        marginLeft: '0.875em',
+        flexDirection: 'row',
+        'li': {
+          fontSize: '1rem',
+          fontWeight: 400,
+          color: props.theme.text.normal,
+          position: 'relative',
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            bottom: '-2.875em',
+            left: 0,
+            width: '100%',
+            height: '.25em',
+            backgroundColor: props.theme.color.orange,
+            transform: 'scaleX(0)',
+            transition: 'transform 150ms ease-in-out'
+          },
+          '&:hover': {
+            cursor: 'pointer',
+            color: props.theme.text.bold,
+            '&::after': {
+              transform: 'scaleX(1)'
+            }
+          }
+        }
+      }
+
+    }
   }
 }));
