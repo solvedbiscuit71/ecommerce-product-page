@@ -11,6 +11,7 @@ export default styled.section(props => ({
   right: '.46785em',
   backgroundColor: 'white',
   borderRadius: '.675em',
+  boxShadow: '0px 5px 15px #0000003b',
 
   '> h2': {
     color: props.theme.text.bold,
@@ -65,6 +66,14 @@ export default styled.section(props => ({
           }
         }
       }
+    }
+  },
+
+  '@media (min-width: 1080px)': {
+    top: '5.875em',
+    right: '5.625em',
+    '#delete:hover': {
+      cursor: 'pointer'
     }
   }
 }))

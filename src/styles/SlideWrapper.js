@@ -33,5 +33,9 @@ export default styled.section(props => ({
     display: 'grid',
     placeContent: 'center',
     'img': { transform: 'scale(.8)' }
+  },
+
+  '@media (min-width: 1080px)': {
+    display: 'none'
   }
 }));

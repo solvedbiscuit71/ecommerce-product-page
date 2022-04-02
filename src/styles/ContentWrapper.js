@@ -2,18 +2,20 @@ import styled from '@emotion/styled';
 
 export default styled.section(props => ({
   margin: '1.5em',
-  '> span': {
-    fontSize: '.85rem',
-    fontWeight: 700,
-    color: 'hsl(26, 100%, 55%)',
+  '> div': {
+    'span': {
+      fontSize: '.85rem',
+      fontWeight: 700,
+      color: 'hsl(26, 100%, 55%)',
+    },
 
-    '~ h1': {
+    'h1': {
       margin: '.5em 0',
       fontSize: '1.675rem',
       color: props.theme.text.bold
     },
 
-    '~ p': {
+    'p': {
       fontSize: '.95rem',
       fontWeight: 400,
       lineHeight: '1.5em',
@@ -70,5 +72,21 @@ export default styled.section(props => ({
     gap: '1em',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+
+  '#gallery': {
+    display: 'none'
+  },
+
+  '@media (min-width: 1080px)': {
+    margin: '5.625em 11.45vw',
+    padding: '0 3em',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '7.75em',
+    '#gallery': {
+      display: 'block',
+      alignSelf: 'stretch'
+    }
   }
 }));

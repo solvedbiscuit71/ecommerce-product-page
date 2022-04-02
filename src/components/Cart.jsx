@@ -35,7 +35,7 @@ function Cart(props) {
                   <p>$125.00 x {props.count} <span>${125 * props.count}.00</span></p>
                 </div>
               </div>
-              <img onClick={props.resetCount} src="images/icon-delete.svg" alt="delete icon" />
+              <img id='delete' onClick={props.resetCount} src="images/icon-delete.svg" alt="delete icon" />
             </div>
             <Button>Checkout</Button>
           </div>
