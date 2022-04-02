@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ModelBg from '../styles/ModelBg';
 import NavbarWrapper from '../styles/NavbarWrapper';
 function Navbar(props) {
   const [show,setShow] = useState(false)
@@ -19,7 +20,8 @@ function Navbar(props) {
 
   return (
     <NavbarWrapper className='navbar clickable' show={show} transition={transition} >
-      <div>
+      <ModelBg className='navbar-bg' onClick={props.closeNav} />
+      <div className='navbar-content'>
         <img src="images/icon-close.svg" alt="close icon" onClick={props.closeNav} />
 
         <ul>

@@ -10,13 +10,13 @@ export default styled.div(props => ({
   zIndex: 10,
   top: 0,
   left: 0,
-  backgroundColor: 'hsla(0,0%,0%,.75)',
-  div: {
+  '.navbar-content': {
     transform: props.transition ? '' : 'translateX(-100%)',
     transition: 'transform 200ms ease-in-out',
     width: '15.625em',
     minHeight: '100vh',
     position: 'absolute',
+    zIndex: 12,
     top: 0,
     left: 0,
     backgroundColor: 'white',
