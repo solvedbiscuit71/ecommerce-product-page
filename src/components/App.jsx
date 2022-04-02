@@ -20,23 +20,33 @@ const theme = {
 function App(props) {
   const [count,setCount] = useState(0)
   const [showCart,setShowCart] = useState(false)
-  const [warning,setWarning] = useState(1)
 
   useEffect(_ => {
     document.addEventListener('click',event => {
-      setWarning(warn => {
-        if (warn == 1) {
-          return 0
-        }else {
-          const cart = document.getElementById('cart-container').getBoundingClientRect()
-          const x = event.clientX
-          const y = event.clientY
-          if (!( x > cart.left && x < cart.right && y > cart.top && y < cart.bottom )) {
-            setShowCart(false)
-            return 1
-          }
-          return warn
+      setShowCart(show => {
+        // check:whether it's opened
+        if (!show) {
+          return show
         }
+        // check:whether we are'nt clicking any "clickable"
+        const clickable = [...document.getElementsByClassName('clickable')]
+        const isClickable = clickable.find(item => {
+          if (item == event.target) {
+            return true
+          }
+          return item.contains(event.target)
+        })
+        if (isClickable) {
+          return show
+        }
+
+        // check:whether we clicked inside the cart
+        const cart = document.getElementById('cart-container').getBoundingClientRect()
+        const {clientX: x,clientY: y} = event
+        if (x > cart.left && x < cart.right && y > cart.top && y < cart.bottom) {
+          return show
+        }
+        return false
       })
     })
   },[])

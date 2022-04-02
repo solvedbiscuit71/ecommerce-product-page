@@ -18,7 +18,7 @@ function Navbar(props) {
   },[props.show])
 
   return (
-    <NavbarWrapper className='navbar' show={show} transition={transition} >
+    <NavbarWrapper className='navbar clickable' show={show} transition={transition} >
       <div>
         <img src="images/icon-close.svg" alt="close icon" onClick={props.closeNav} />
 
