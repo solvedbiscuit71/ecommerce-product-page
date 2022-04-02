@@ -9,7 +9,7 @@ const galleryThumb = [
 function Thumbnail(props) {
   return (
     <ThumbnailWrapper className='gallery-thumbnail'>
-      {galleryThumb.map(( thumb,index ) => <div id={props.current == index ? 'thumbnail-active' : null} className='clickable' onClick={_ => props.update(index)} ><img src={thumb} alt="product image" key={index} /></div>)}
+      {galleryThumb.map(( thumb,index ) => <div key={index} id={props.current == index ? 'thumbnail-active' : null} className='clickable' onClick={_ => props.update(index)} ><img src={thumb} alt="product image" key={index} /></div>)}
     </ThumbnailWrapper>
   );
 }

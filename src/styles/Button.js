@@ -8,5 +8,21 @@ export default styled.button(props => ({
   backgroundColor: props.theme.color.orange,
   border: 'none',
   borderRadius: '.375em',
-  color: 'white'
+  color: 'white',
+  position: 'relative',
+  '&::after': {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'hsla(0,0%,100%,0.375)',
+    borderRadius: '.5em',
+  },
+  '&:hover': {
+    cursor: 'pointer',
+    '&::after': {
+      content: '""'
+    }
+  }
 }));

@@ -7,6 +7,7 @@ export default styled.section(props => ({
       fontSize: '.85rem',
       fontWeight: 700,
       color: 'hsl(26, 100%, 55%)',
+      letterSpacing: '.125em'
     },
 
     'h1': {
@@ -40,6 +41,7 @@ export default styled.section(props => ({
         backgroundColor: props.theme.color.paleOrange,
         color: props.theme.color.orange,
         fontSize: '.95rem',
+        letterSpacing: '0.05em',
         padding: '0.25em .5em',
         borderRadius: '.5em'
       }
@@ -55,7 +57,7 @@ export default styled.section(props => ({
   '.input': {
     minHeight: '3.375em',
     backgroundColor: props.theme.color.grayishBlue,
-    borderRadius: '.5em',
+    borderRadius: '.625em',
     padding: '0 1.5em',
     display: 'flex',
     justifyContent: 'space-between',
@@ -71,7 +73,8 @@ export default styled.section(props => ({
     display: 'flex',
     gap: '1em',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderRadius: '.625em'
   },
 
   '#gallery': {
@@ -87,6 +90,49 @@ export default styled.section(props => ({
     '#gallery': {
       display: 'block',
       alignSelf: 'stretch'
+    },
+    '> div': {
+      'h1': {
+        fontSize: '2.75rem',
+        margin: '0.375em 0'
+      },
+      'p': {
+        fontSize: '1rem',
+        margin: '2em 0 1.5em',
+        lineHeight: '1.625rem'
+      }
+    },
+    
+    '.price': {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: '1em',
+      '> div:first-of-type': {
+        fontSize: '1.875em',
+        gap: '.5em',
+
+        'span': {
+          fontSize: '1rem',
+        }
+      },
+    },
+
+    '.input-container': {
+      display: 'flex',
+      gap: '1.125em',
+      alignItems: 'center',
+
+      '.input': {
+        flexBasis: '9.75em',
+        flexShrink: 0,
+
+        'svg:hover': {
+          cursor: 'pointer',
+          'path': {
+            fill: 'hsla(26, 100%, 55%,0.425)'
+          }
+        }
+      }
     }
-  }
+  },
 }));

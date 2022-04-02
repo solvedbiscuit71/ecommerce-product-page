@@ -19,7 +19,7 @@ export default styled.div(props => ({
       left: 0,
       width: '100%',
       height: '100%',
-      backgroundColor: '#ffffff80',
+      backgroundColor: 'hsla(0,0%,100%,0.625)',
       borderRadius: '.5em',
     },
     '&:hover': {
