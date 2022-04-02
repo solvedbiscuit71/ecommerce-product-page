@@ -14,7 +14,7 @@ function Gallery(props) {
       <div className='gallery-image'>
         {galleryImage.map(( image,index ) => <img style={current === index ? {opacity: 1} : {opacity: 0}} src={image} alt="product image" key={index} />)}
       </div>
-      <Thumbnail current={current}/>
+      <Thumbnail current={current} update={update}/>
     </GalleryWrapper>
   );
 }

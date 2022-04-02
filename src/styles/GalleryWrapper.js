@@ -15,6 +15,7 @@ export default styled.div(props => ({
       width: '100%',
       objectFit: 'cover',
       borderRadius: '1em',
+      transition: 'opacity 300ms ease-in'
     }
   },
   '.gallery-thumbnail': {
