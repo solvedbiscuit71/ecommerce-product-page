@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Button from '../styles/Button';
 import ContentWrapper from '../styles/ContentWrapper';
 import Gallery from './Gallery';
+import Lightbox from './Lightbox';
 function Content(props) {
   const [count,setCount] = useState(0)
+  const [show,setShow] = useState(false)
   const inc = _ => {
     setCount(count + 1)
   }
@@ -16,7 +18,8 @@ function Content(props) {
 
   return (
     <ContentWrapper>
-      <Gallery/>
+      <Gallery openLightbox={_ => setShow(true)} />
+      <Lightbox show={show} closeLightbox={_ => setShow(false)}/>
       <div>
         <span>SNEAKER COMPANY</span>
         <h1>Fall Limited Edition Sneakers</h1>

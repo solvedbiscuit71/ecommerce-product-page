@@ -1,12 +1,45 @@
 import styled from '@emotion/styled';
 
 export default styled.div(props => ({
-  width: 445,
+  width: props.lightbox ? 550 : 445,
   flexShrink: 0,
+  '.slide-grid': props.lightbox ? {
+    position: 'relative',
+    height: 550,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    '.btn': {
+      position: 'relative',
+      zIndex: 5,
+      width: '2.5em',
+      height: '2.5em',
+      backgroundColor: 'white',
+      borderRadius: '50%',
+      display: 'grid',
+      placeContent: 'center',
+      'svg': { 
+        transform: 'scale(.8)' 
+      },
+      '&:hover': {
+        cursor: 'pointer',
+        'path': {
+          stroke: props.theme.color.orange
+        }
+      },
+
+      '&:first-of-type': { transform: 'scale(1.5) translate(-35%)' },
+      '&:last-of-type': { transform: 'scale(1.5) translate(35%)' }
+    },
+  } : null,
   '.gallery-image': {
     width: '100%',
-    height: 445,
-    position: 'relative',
+    height: props.lightbox ? 550 : 445,
+    position: props.lightbox ? 'absolute' : 'relative',
+    top: 0,
+    left: 0,
+    backgroundColor: 'white',
+    borderRadius: '1.05em',
 
     'img': {
       position: 'absolute',
@@ -16,6 +49,9 @@ export default styled.div(props => ({
       objectFit: 'cover',
       borderRadius: '1em',
       transition: 'opacity 300ms ease-in'
+    },
+    '&:hover': {
+      cursor: props.lightbox ? 'default' : 'zoom-out'
     }
   },
   '.gallery-thumbnail': {
