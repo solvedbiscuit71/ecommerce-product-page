@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export default styled.div(props => ({
+  display: 'none',
   width: props.lightbox ? 550 : 445,
   flexShrink: 0,
   '.slide-grid': props.lightbox ? {
@@ -56,5 +57,9 @@ export default styled.div(props => ({
   },
   '.gallery-thumbnail': {
     marginTop: '2em'
+  },
+
+  '@media (min-width: 1080px)': {
+    display: 'block'
   }
 }));
