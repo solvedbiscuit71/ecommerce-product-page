@@ -51,7 +51,7 @@ export default styled.div(props => ({
       transition: 'opacity 300ms ease-in'
     },
     '&:hover': {
-      cursor: props.lightbox ? 'default' : 'zoom-out'
+      cursor: props.lightbox ? 'default' : 'zoom-in'
     }
   },
   '.gallery-thumbnail': {

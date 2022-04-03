@@ -29,7 +29,7 @@ export default styled.div(props => ({
       }
     }
   },
-  '#thumbnail-active': {
+  '.thumbnail-active': {
     outline: `.15em solid ${props.theme.color.orange}`,
     '&::after': {
       content: '""'

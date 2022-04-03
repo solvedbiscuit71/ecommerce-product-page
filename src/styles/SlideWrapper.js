@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export default styled.section(props => ({
+export default styled.div(props => ({
   aspectRatio: '375 / 300',
   position: 'relative',
   display: 'flex',

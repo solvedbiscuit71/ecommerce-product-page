@@ -10,7 +10,7 @@ const galleryImage = [
 function Gallery(props) {
   const [current,update] = useState(0)
   return (
-    <GalleryWrapper id='gallery'>
+    <GalleryWrapper>
       <div onClick={props.openLightbox} className='gallery-image clickable'>
         {galleryImage.map(( image,index ) => <img style={current === index ? {opacity: 1} : {opacity: 0}} src={image} alt="product image" key={index} />)}
       </div>
